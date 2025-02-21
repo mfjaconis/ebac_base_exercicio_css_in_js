@@ -1,19 +1,32 @@
-.vaga {
+import styled from "styled-components";
+
+export const ListVaga = styled.li `
   border: 1px solid var(--cor-principal);
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
   padding: 16px;
   transition: all ease .3s;
   border-radius: 8px;
-}
 
-.vagaTitulo {
+  &:hover {
+      background-color: var(--cor-principal);
+      color: var(--cor-secundaria);
+
+    a {
+      border-color: var(--cor-principal);
+      background-color: var(--cor-secundaria);
+      color: var(--cor-principal);
+    }
+  }
+`
+
+export const TitleVaga = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
-}
+`
 
-.vagaLink {
-  border-color: var(--cor-secundaria);
+export const LinkVaga = styled.a`
+    border-color: var(--cor-secundaria);
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
     display: inline-block;
@@ -24,19 +37,10 @@
     font-size: 14px;
     border-radius: 8px;
     text-align: center;
+    cursor: pointer;
+
 
     @media (max-width: 768px) {
       display: block;
     }
-}
-
-.vaga:hover {
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
-}
-
-.vaga:hover a {
-  border-color: var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
-}
+`
